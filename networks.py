@@ -16,7 +16,7 @@ class ModifiedVGG16(jt.nn.Module):
         
     def make_model(self):
         """创建模型"""
-        # 关键改动：使用导入的 vgg16 函数加载预训练模型
+        # 使用导入的 vgg16 函数加载预训练模型
         vgg16_pretrained = vgg16(pretrained=True)
         
         # 初始化数据集和分类器列表

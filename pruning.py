@@ -24,6 +24,22 @@ class PackNetPruning:
         
         self.current_masks = None
 
+    def get_biases(self):
+        """获取当前模型所有可剪枝层的偏置项快照。"""
+        biases = {}
+        for module_idx, module in self.get_prunable_modules():
+            if hasattr(module, 'bias') and module.bias is not None:
+                biases[module_idx] = module.bias.clone()
+        return biases
+
+    def restore_biases(self, biases):
+        """使用给定的快照恢复模型的偏置项。"""
+        for module_idx, module in self.get_prunable_modules():
+            if module_idx in biases:
+                # 使用Jittor的 assign() 方法进行就地复制
+                module.bias.assign(biases[module_idx])
+
+
     def get_prunable_modules(self):
         """获取所有可剪枝的模块"""
         prunable_modules = []
@@ -160,15 +176,29 @@ class PackNetPruning:
     def apply_mask(self, dataset_idx):
         """
         应用特定任务的掩码，用于评估时恢复特定任务的权重
+        (最终解决方案：只保留当前任务的权重)
         """
+        masks_to_apply = self.current_masks if self.current_masks is not None else self.previous_masks
+
+        # PackNet的逻辑是，后续任务的权重是在之前任务剪枝掉的权重上训练的。
+        # 所以评估任务N时，需要保留任务1到任务N的所有权重。
+        # 根据我们之前的分析，您的任务索引是从2开始的(Cubs=2, Cars=3, Flowers=4)。
+        # 而ImageNet预训练权重被标记为1。
+        
+        # 所以正确的逻辑是，评估任务X (dataset_idx)时，我们需要保留所有
+        # 掩码值大于0，且小于等于 `dataset_idx` 的权重。
+        
         for module_idx, module in self.get_prunable_modules():
-            if module_idx in self.current_masks:
-                mask = self.current_masks[module_idx]
+            if module_idx in masks_to_apply:
+                mask = masks_to_apply[module_idx]
                 weight = module.weight
                 
-                # 清零不属于指定任务的权重
-                weight[mask == 0] = 0.0  # 被剪枝的权重
-                weight[mask > dataset_idx] = 0.0  # 后续任务的权重
+                # 创建一个“保留掩码”，保留所有属于之前任务和当前任务的权重。
+                # 原始ImageNet(标记为1)的权重也需要保留，因为所有任务都共享它。
+                keep_mask = (mask > 0) & (mask <= dataset_idx)
+                
+                # 将所有不保留的权重清零
+                weight[keep_mask == False] = 0.0
 
     @staticmethod
     def save_masks(masks, filepath):

@@ -1,5 +1,5 @@
 """
-PackNet主训练脚本 (修正版)
+PackNet主训练脚本
 按照原论文算法实现PackNet多任务学习
 """
 
@@ -41,6 +41,7 @@ class PackNetTrainer:
         
         # 初始化掩码
         self.previous_masks = self._init_masks()
+        self.dataset2biases = {}  # <-- 新增：初始化用于存储各任务偏置的字典
         
         print(f"PackNet训练器初始化完成")
         print(f"任务序列: {self.task_list}")
@@ -83,16 +84,6 @@ class PackNetTrainer:
             # 统计
             total_loss += loss.item()
             predicted = jt.argmax(outputs, dim=1)[0]
-            # =================== 在这里插入调试代码 ===================
-            if batch_idx == 0: # 只在第一个batch打印即可
-                print("\n\n--- DEBUG INFO ---")
-                print(f"Labels DTYPE: {labels.dtype}, Predicted DTYPE: {predicted.dtype}")
-                print(f"Labels SHAPE: {labels.shape}, Predicted SHAPE: {predicted.shape}")
-                print(f"Sample Labels:    {labels.data[:5]}")
-                print(f"Sample Predicted: {predicted.data[:5]}")
-                print("--- END DEBUG INFO ---\n\n")
-            # =================== 调试代码结束 ===================
-
 
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
@@ -236,9 +227,12 @@ class PackNetTrainer:
         # 9. 更新掩码
         self.previous_masks = pruner.current_masks
         
-        # 10. 最终评估
+        # 10. 保存当前任务的偏置快照
+        print(f"正在为任务 '{task_name}' 保存偏置快照...")
+        self.dataset2biases[task_name] = pruner.get_biases()
+
+        # 11. 最终评估
         final_acc = self.evaluate(test_loader)
-        print(f"\n{task_name} 任务完成，最终准确率: {final_acc:.2f}%")
         
         return final_acc
     
@@ -292,13 +286,17 @@ class PackNetTrainer:
         """保存检查点"""
         checkpoint_path = os.path.join(self.save_dir, "packnet_model.pkl")
         mask_path = os.path.join(self.save_dir, "packnet_masks.npy")
-        
-        # 保存模型
-        jt.save(self.model.state_dict(), checkpoint_path)
-        
+
+        # 将模型和偏置都保存到 .pkl 文件中
+        ckpt = {
+            'model_state_dict': self.model.state_dict(),
+            'dataset2biases': self.dataset2biases
+        }
+        jt.save(ckpt, checkpoint_path)
+
         # 保存掩码
         PackNetPruning.save_masks(self.previous_masks, mask_path)
-        
+
         print(f"检查点已保存到: {checkpoint_path}")
         print(f"掩码已保存到: {mask_path}")
     
@@ -317,14 +315,11 @@ class PackNetTrainer:
         # 保存检查点
         self.save_checkpoint()
         
-        # 最终评估
-        final_results = self.evaluate_all_tasks()
-        
         total_time = time.time() - start_time
         print(f"\nPackNet实验完成！")
         print(f"总耗时: {total_time/60:.2f} 分钟")
         
-        return final_results
+        return 
 
 
 if __name__ == "__main__":

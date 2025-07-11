@@ -1,0 +1,773 @@
+PackNet训练器初始化完成
+任务序列: ['cubs', 'cars', 'flowers']
+剪枝率: 75.0%
+开始PackNet多任务学习实验
+
+==================================================
+训练任务 1: CUBS
+==================================================
+加载 cubs 数据集 (train): 5994 张图像, 200 个类别
+加载 cubs 数据集 (test): 5794 张图像, 200 个类别
+为新任务准备掩码，新任务索引: 2
+
+阶段1: 微调训练 cubs
+当前学习率: 0.001
+Epoch 1/20
+  Batch 0, Loss: 5.5318, Acc: 3.12%
+  Batch 50, Loss: 4.9854, Acc: 3.31%
+  Batch 100, Loss: 3.4251, Acc: 6.84%
+  Batch 150, Loss: 3.0778, Acc: 12.87%
+  训练损失: 0.1213, 训练准确率: 17.10%
+  测试准确率: 48.90%
+Epoch 2/20
+  Batch 0, Loss: 1.9796, Acc: 40.62%
+  Batch 50, Loss: 2.0610, Acc: 48.35%
+  Batch 100, Loss: 1.5865, Acc: 49.75%
+  Batch 150, Loss: 1.4677, Acc: 50.46%
+  训练损失: 0.0573, 训练准确率: 51.22%
+  测试准确率: 61.30%
+Epoch 3/20
+  Batch 0, Loss: 0.7884, Acc: 78.12%
+  Batch 50, Loss: 1.3490, Acc: 64.95%
+  Batch 100, Loss: 1.4519, Acc: 64.94%
+  Batch 150, Loss: 1.0388, Acc: 65.52%
+  训练损失: 0.0389, 训练准确率: 65.17%
+  测试准确率: 64.62%
+Epoch 4/20
+  Batch 0, Loss: 0.8733, Acc: 81.25%
+  Batch 50, Loss: 0.9767, Acc: 74.39%
+  Batch 100, Loss: 0.9875, Acc: 73.70%
+  Batch 150, Loss: 0.6170, Acc: 73.49%
+  训练损失: 0.0288, 训练准确率: 73.95%
+  测试准确率: 68.67%
+Epoch 5/20
+  Batch 0, Loss: 0.6444, Acc: 81.25%
+  Batch 50, Loss: 0.2768, Acc: 80.64%
+  Batch 100, Loss: 0.7436, Acc: 80.29%
+  Batch 150, Loss: 0.4811, Acc: 79.41%
+  训练损失: 0.0220, 训练准确率: 79.36%
+  测试准确率: 70.09%
+Epoch 6/20
+  Batch 0, Loss: 0.6939, Acc: 78.12%
+  Batch 50, Loss: 0.5921, Acc: 82.05%
+  Batch 100, Loss: 0.3474, Acc: 81.28%
+  Batch 150, Loss: 0.2968, Acc: 81.91%
+  训练损失: 0.0188, 训练准确率: 81.95%
+  测试准确率: 70.25%
+Epoch 7/20
+  Batch 0, Loss: 0.3207, Acc: 93.75%
+  Batch 50, Loss: 0.4484, Acc: 86.64%
+  Batch 100, Loss: 0.4422, Acc: 86.01%
+  Batch 150, Loss: 0.3207, Acc: 85.97%
+  训练损失: 0.0142, 训练准确率: 85.66%
+  测试准确率: 71.07%
+Epoch 8/20
+  Batch 0, Loss: 0.5384, Acc: 84.38%
+  Batch 50, Loss: 0.5379, Acc: 89.09%
+  Batch 100, Loss: 0.1136, Acc: 88.89%
+  Batch 150, Loss: 0.1182, Acc: 88.97%
+  训练损失: 0.0111, 训练准确率: 89.05%
+  测试准确率: 71.82%
+Epoch 9/20
+  Batch 0, Loss: 0.2346, Acc: 93.75%
+  Batch 50, Loss: 0.3014, Acc: 93.01%
+  Batch 100, Loss: 0.4873, Acc: 91.09%
+  Batch 150, Loss: 0.6569, Acc: 90.36%
+  训练损失: 0.0097, 训练准确率: 90.37%
+  测试准确率: 71.64%
+Epoch 10/20
+  Batch 0, Loss: 0.3892, Acc: 90.62%
+  Batch 50, Loss: 0.3115, Acc: 93.26%
+  Batch 100, Loss: 0.1824, Acc: 92.51%
+  Batch 150, Loss: 0.5463, Acc: 92.65%
+  训练损失: 0.0077, 训练准确率: 92.30%
+  测试准确率: 71.51%
+当前学习率: 0.0001
+Epoch 11/20
+  Batch 0, Loss: 0.2510, Acc: 87.50%
+  Batch 50, Loss: 0.0759, Acc: 94.49%
+  Batch 100, Loss: 0.0407, Acc: 94.89%
+  Batch 150, Loss: 0.0590, Acc: 95.28%
+  训练损失: 0.0048, 训练准确率: 95.29%
+  测试准确率: 74.30%
+Epoch 12/20
+  Batch 0, Loss: 0.0281, Acc: 100.00%
+  Batch 50, Loss: 0.2186, Acc: 96.63%
+  Batch 100, Loss: 0.2343, Acc: 96.69%
+  Batch 150, Loss: 0.0338, Acc: 97.02%
+  训练损失: 0.0034, 训练准确率: 96.66%
+  测试准确率: 74.99%
+Epoch 13/20
+  Batch 0, Loss: 0.0671, Acc: 100.00%
+  Batch 50, Loss: 0.0881, Acc: 97.24%
+  Batch 100, Loss: 0.2636, Acc: 97.43%
+  Batch 150, Loss: 0.0941, Acc: 97.16%
+  训练损失: 0.0030, 训练准确率: 97.16%
+  测试准确率: 75.37%
+Epoch 14/20
+  Batch 0, Loss: 0.1166, Acc: 96.88%
+  Batch 50, Loss: 0.0155, Acc: 97.18%
+  Batch 100, Loss: 0.0848, Acc: 97.00%
+  Batch 150, Loss: 0.0503, Acc: 96.94%
+  训练损失: 0.0028, 训练准确率: 97.06%
+  测试准确率: 75.68%
+Epoch 15/20
+  Batch 0, Loss: 0.1229, Acc: 96.88%
+  Batch 50, Loss: 0.0844, Acc: 97.67%
+  Batch 100, Loss: 0.0136, Acc: 97.74%
+  Batch 150, Loss: 0.0948, Acc: 97.62%
+  训练损失: 0.0024, 训练准确率: 97.56%
+  测试准确率: 75.51%
+Epoch 16/20
+  Batch 0, Loss: 0.0405, Acc: 100.00%
+  Batch 50, Loss: 0.0523, Acc: 97.49%
+  Batch 100, Loss: 0.0453, Acc: 97.59%
+  Batch 150, Loss: 0.0014, Acc: 97.62%
+  训练损失: 0.0024, 训练准确率: 97.61%
+  测试准确率: 75.35%
+Epoch 17/20
+  Batch 0, Loss: 0.0140, Acc: 100.00%
+  Batch 50, Loss: 0.0982, Acc: 97.67%
+  Batch 100, Loss: 0.0329, Acc: 97.65%
+  Batch 150, Loss: 0.0146, Acc: 97.70%
+  训练损失: 0.0021, 训练准确率: 97.66%
+  测试准确率: 75.56%
+Epoch 18/20
+  Batch 0, Loss: 0.0224, Acc: 100.00%
+  Batch 50, Loss: 0.0046, Acc: 98.35%
+  Batch 100, Loss: 0.0392, Acc: 98.21%
+  Batch 150, Loss: 0.0467, Acc: 97.99%
+  训练损失: 0.0020, 训练准确率: 97.96%
+  测试准确率: 75.44%
+Epoch 19/20
+  Batch 0, Loss: 0.0283, Acc: 100.00%
+  Batch 50, Loss: 0.0159, Acc: 97.49%
+  Batch 100, Loss: 0.0519, Acc: 97.71%
+  Batch 150, Loss: 0.2274, Acc: 97.70%
+  训练损失: 0.0021, 训练准确率: 97.76%
+  测试准确率: 75.73%
+Epoch 20/20
+  Batch 0, Loss: 0.0224, Acc: 100.00%
+  Batch 50, Loss: 0.1020, Acc: 98.16%
+  Batch 100, Loss: 0.1488, Acc: 98.17%
+  Batch 150, Loss: 0.0059, Acc: 98.20%
+  训练损失: 0.0018, 训练准确率: 98.16%
+  测试准确率: 75.66%
+微调完成，最佳准确率: 75.73%
+
+阶段2: 剪枝 cubs
+剪枝前评估:
+  剪枝前准确率: 75.66%
+开始剪枝，任务索引: 2
+剪枝比例: 75.0%
+模块 1: 剪枝 1296/1728 (75.00%)
+模块 6: 剪枝 55296/73728 (75.00%)
+模块 11: 剪枝 221184/294912 (75.00%)
+模块 18: 剪枝 884736/1179648 (75.00%)
+模块 25: 剪枝 1769472/2359296 (75.00%)
+模块 33: 剪枝 77070338/102760448 (75.00%)
+模块 36: 剪枝 12582912/16777216 (75.00%)
+剪枝后评估:
+  剪枝后准确率: 30.10%
+
+阶段3: 剪枝后微调 cubs
+当前学习率: 0.0001
+微调 Epoch 1/10
+  Batch 0, Loss: 3.3695, Acc: 25.00%
+  Batch 50, Loss: 0.9331, Acc: 54.17%
+  Batch 100, Loss: 0.8272, Acc: 63.00%
+  Batch 150, Loss: 0.5542, Acc: 68.23%
+  微调准确率: 67.97%
+微调 Epoch 2/10
+  Batch 0, Loss: 0.3684, Acc: 84.38%
+  Batch 50, Loss: 0.5338, Acc: 82.29%
+  Batch 100, Loss: 0.4122, Acc: 82.21%
+  Batch 150, Loss: 0.6033, Acc: 83.01%
+  微调准确率: 70.71%
+微调 Epoch 3/10
+  Batch 0, Loss: 0.4992, Acc: 84.38%
+  Batch 50, Loss: 0.3348, Acc: 86.46%
+  Batch 100, Loss: 0.3323, Acc: 86.29%
+  Batch 150, Loss: 0.4475, Acc: 86.15%
+  微调准确率: 71.59%
+微调 Epoch 4/10
+  Batch 0, Loss: 0.2130, Acc: 93.75%
+  Batch 50, Loss: 0.3345, Acc: 87.62%
+  Batch 100, Loss: 0.6094, Acc: 88.03%
+  Batch 150, Loss: 0.3857, Acc: 88.10%
+  微调准确率: 72.28%
+微调 Epoch 5/10
+  Batch 0, Loss: 0.3479, Acc: 93.75%
+  Batch 50, Loss: 0.4318, Acc: 90.56%
+  Batch 100, Loss: 0.3743, Acc: 89.54%
+  Batch 150, Loss: 0.1891, Acc: 90.09%
+  微调准确率: 72.56%
+微调 Epoch 6/10
+  Batch 0, Loss: 0.2431, Acc: 93.75%
+  Batch 50, Loss: 0.1468, Acc: 90.69%
+  Batch 100, Loss: 0.4593, Acc: 90.72%
+  Batch 150, Loss: 0.1243, Acc: 90.56%
+  微调准确率: 72.83%
+微调 Epoch 7/10
+  Batch 0, Loss: 0.1251, Acc: 96.88%
+  Batch 50, Loss: 0.4979, Acc: 91.67%
+  Batch 100, Loss: 0.3378, Acc: 91.27%
+  Batch 150, Loss: 0.1718, Acc: 91.25%
+  微调准确率: 72.99%
+微调 Epoch 8/10
+  Batch 0, Loss: 0.2074, Acc: 90.62%
+  Batch 50, Loss: 0.3794, Acc: 91.85%
+  Batch 100, Loss: 0.1212, Acc: 91.77%
+  Batch 150, Loss: 0.1311, Acc: 92.09%
+  微调准确率: 73.44%
+微调 Epoch 9/10
+  Batch 0, Loss: 0.1085, Acc: 100.00%
+  Batch 50, Loss: 0.1593, Acc: 92.28%
+  Batch 100, Loss: 0.1236, Acc: 92.33%
+  Batch 150, Loss: 0.0816, Acc: 92.47%
+  微调准确率: 73.40%
+微调 Epoch 10/10
+  Batch 0, Loss: 0.3040, Acc: 90.62%
+  Batch 50, Loss: 0.2642, Acc: 94.36%
+  Batch 100, Loss: 0.1569, Acc: 93.90%
+  Batch 150, Loss: 0.1817, Acc: 93.44%
+  微调准确率: 73.66%
+
+cubs 任务完成，最终准确率: 73.66%
+
+==================================================
+训练任务 2: CARS
+==================================================
+加载 cars 数据集 (train): 8103 张图像, 196 个类别
+加载 cars 数据集 (test): 8000 张图像, 196 个类别
+为新任务准备掩码，新任务索引: 3
+
+阶段1: 微调训练 cars
+当前学习率: 0.001
+Epoch 1/20
+[w 0709 14:32:18.945610 56 grad.cc:81] grads[0] 'classifiers.0.weight' doesn't have gradient. It will be set to zero: Var(18515273:1:1:1:i0:o0:s1:n0:g1,float32,classifiers.0.weight,7fa8ec480000)[200,4096,]
+[w 0709 14:32:18.945646 56 grad.cc:81] grads[1] 'classifiers.0.bias' doesn't have gradient. It will be set to zero: Var(18515275:1:1:1:i0:o0:s1:n0:g1,float32,classifiers.0.bias,7faadb5e7a00)[200,]
+  Batch 0, Loss: 7.4000, Acc: 0.00%
+  Batch 50, Loss: 5.2499, Acc: 0.98%
+  Batch 100, Loss: 5.2585, Acc: 1.21%
+  Batch 150, Loss: 5.0489, Acc: 1.88%
+  Batch 200, Loss: 4.4845, Acc: 2.61%
+  Batch 250, Loss: 4.3086, Acc: 3.49%
+  训练损失: 0.1543, 训练准确率: 3.50%
+  测试准确率: 13.69%
+Epoch 2/20
+  Batch 0, Loss: 4.3430, Acc: 9.38%
+  Batch 50, Loss: 3.2393, Acc: 13.54%
+  Batch 100, Loss: 3.6433, Acc: 15.72%
+  Batch 150, Loss: 3.1090, Acc: 17.88%
+  Batch 200, Loss: 2.9405, Acc: 20.09%
+  Batch 250, Loss: 2.9361, Acc: 21.75%
+  训练损失: 0.1052, 训练准确率: 21.84%
+  测试准确率: 38.77%
+Epoch 3/20
+  Batch 0, Loss: 2.6569, Acc: 31.25%
+  Batch 50, Loss: 2.6886, Acc: 39.03%
+  Batch 100, Loss: 2.1419, Acc: 39.98%
+  Batch 150, Loss: 2.2677, Acc: 41.39%
+  Batch 200, Loss: 2.1171, Acc: 43.35%
+  Batch 250, Loss: 1.7122, Acc: 44.15%
+  训练损失: 0.0675, 训练准确率: 44.13%
+  测试准确率: 56.01%
+Epoch 4/20
+  Batch 0, Loss: 1.4006, Acc: 65.62%
+  Batch 50, Loss: 1.2648, Acc: 60.85%
+  Batch 100, Loss: 1.8539, Acc: 59.59%
+  Batch 150, Loss: 2.1951, Acc: 58.96%
+  Batch 200, Loss: 2.0513, Acc: 58.97%
+  Batch 250, Loss: 0.8382, Acc: 59.55%
+  训练损失: 0.0460, 训练准确率: 59.52%
+  测试准确率: 65.19%
+Epoch 5/20
+  Batch 0, Loss: 1.2526, Acc: 62.50%
+  Batch 50, Loss: 1.1253, Acc: 68.87%
+  Batch 100, Loss: 0.7732, Acc: 70.39%
+  Batch 150, Loss: 0.7632, Acc: 69.50%
+  Batch 200, Loss: 1.1626, Acc: 69.50%
+  Batch 250, Loss: 0.7278, Acc: 69.38%
+  训练损失: 0.0335, 训练准确率: 69.37%
+  测试准确率: 70.03%
+Epoch 6/20
+  Batch 0, Loss: 1.2238, Acc: 71.88%
+  Batch 50, Loss: 0.5913, Acc: 76.59%
+  Batch 100, Loss: 0.9542, Acc: 76.73%
+  Batch 150, Loss: 0.6479, Acc: 76.68%
+  Batch 200, Loss: 0.6873, Acc: 77.04%
+  Batch 250, Loss: 1.4535, Acc: 76.98%
+  训练损失: 0.0243, 训练准确率: 76.99%
+  测试准确率: 71.69%
+Epoch 7/20
+  Batch 0, Loss: 0.8302, Acc: 78.12%
+  Batch 50, Loss: 0.8094, Acc: 81.31%
+  Batch 100, Loss: 0.6599, Acc: 82.98%
+  Batch 150, Loss: 0.4719, Acc: 82.16%
+  Batch 200, Loss: 0.6215, Acc: 81.70%
+  Batch 250, Loss: 0.5104, Acc: 81.92%
+  训练损失: 0.0189, 训练准确率: 81.93%
+  测试准确率: 73.89%
+Epoch 8/20
+  Batch 0, Loss: 0.6584, Acc: 81.25%
+  Batch 50, Loss: 0.6390, Acc: 85.97%
+  Batch 100, Loss: 0.2918, Acc: 85.21%
+  Batch 150, Loss: 0.6810, Acc: 85.49%
+  Batch 200, Loss: 0.5852, Acc: 85.12%
+  Batch 250, Loss: 0.4448, Acc: 85.13%
+  训练损失: 0.0152, 训练准确率: 85.08%
+  测试准确率: 76.67%
+Epoch 9/20
+  Batch 0, Loss: 0.3630, Acc: 87.50%
+  Batch 50, Loss: 0.5020, Acc: 88.97%
+  Batch 100, Loss: 0.5772, Acc: 88.86%
+  Batch 150, Loss: 0.3760, Acc: 88.76%
+  Batch 200, Loss: 0.6169, Acc: 88.65%
+  Batch 250, Loss: 0.4175, Acc: 88.51%
+  训练损失: 0.0120, 训练准确率: 88.51%
+  测试准确率: 76.80%
+Epoch 10/20
+  Batch 0, Loss: 0.2932, Acc: 90.62%
+  Batch 50, Loss: 0.1044, Acc: 91.42%
+  Batch 100, Loss: 0.0793, Acc: 91.15%
+  Batch 150, Loss: 0.3888, Acc: 91.35%
+  Batch 200, Loss: 0.3065, Acc: 90.84%
+  Batch 250, Loss: 0.2095, Acc: 90.49%
+  训练损失: 0.0097, 训练准确率: 90.53%
+  测试准确率: 76.42%
+当前学习率: 0.0001
+Epoch 11/20
+  Batch 0, Loss: 0.1673, Acc: 93.75%
+  Batch 50, Loss: 0.0507, Acc: 93.87%
+  Batch 100, Loss: 0.3513, Acc: 94.40%
+  Batch 150, Loss: 0.1058, Acc: 94.62%
+  Batch 200, Loss: 0.1525, Acc: 94.82%
+  Batch 250, Loss: 0.1803, Acc: 94.96%
+  训练损失: 0.0053, 训练准确率: 94.96%
+  测试准确率: 80.70%
+Epoch 12/20
+  Batch 0, Loss: 0.0578, Acc: 100.00%
+  Batch 50, Loss: 0.0373, Acc: 96.26%
+  Batch 100, Loss: 0.0589, Acc: 95.64%
+  Batch 150, Loss: 0.0345, Acc: 95.88%
+  Batch 200, Loss: 0.0153, Acc: 95.86%
+  Batch 250, Loss: 0.1154, Acc: 96.07%
+  训练损失: 0.0040, 训练准确率: 96.06%
+  测试准确率: 81.11%
+Epoch 13/20
+  Batch 0, Loss: 0.0632, Acc: 100.00%
+  Batch 50, Loss: 0.1293, Acc: 96.51%
+  Batch 100, Loss: 0.0588, Acc: 96.38%
+  Batch 150, Loss: 0.1393, Acc: 96.56%
+  Batch 200, Loss: 0.3387, Acc: 96.55%
+  Batch 250, Loss: 0.0376, Acc: 96.68%
+  训练损失: 0.0036, 训练准确率: 96.67%
+  测试准确率: 81.26%
+Epoch 14/20
+  Batch 0, Loss: 0.0287, Acc: 100.00%
+  Batch 50, Loss: 0.1099, Acc: 96.88%
+  Batch 100, Loss: 0.0632, Acc: 96.91%
+  Batch 150, Loss: 0.0601, Acc: 96.92%
+  Batch 200, Loss: 0.0752, Acc: 96.80%
+  Batch 250, Loss: 0.1200, Acc: 96.85%
+  训练损失: 0.0033, 训练准确率: 96.84%
+  测试准确率: 81.66%
+Epoch 15/20
+  Batch 0, Loss: 0.0332, Acc: 100.00%
+  Batch 50, Loss: 0.0315, Acc: 97.30%
+  Batch 100, Loss: 0.0604, Acc: 97.37%
+  Batch 150, Loss: 0.0502, Acc: 97.14%
+  Batch 200, Loss: 0.1141, Acc: 97.12%
+  Batch 250, Loss: 0.0847, Acc: 97.00%
+  训练损失: 0.0031, 训练准确率: 96.99%
+  测试准确率: 81.90%
+Epoch 16/20
+  Batch 0, Loss: 0.0580, Acc: 100.00%
+  Batch 50, Loss: 0.2772, Acc: 96.63%
+  Batch 100, Loss: 0.0269, Acc: 97.06%
+  Batch 150, Loss: 0.0185, Acc: 97.02%
+  Batch 200, Loss: 0.1008, Acc: 97.09%
+  Batch 250, Loss: 0.0337, Acc: 97.17%
+  训练损失: 0.0029, 训练准确率: 97.18%
+  测试准确率: 81.86%
+Epoch 17/20
+  Batch 0, Loss: 0.1619, Acc: 93.75%
+  Batch 50, Loss: 0.1408, Acc: 96.94%
+  Batch 100, Loss: 0.3213, Acc: 97.25%
+  Batch 150, Loss: 0.0142, Acc: 97.35%
+  Batch 200, Loss: 0.0991, Acc: 97.33%
+  Batch 250, Loss: 0.1584, Acc: 97.30%
+  训练损失: 0.0028, 训练准确率: 97.31%
+  测试准确率: 81.97%
+Epoch 18/20
+  Batch 0, Loss: 0.0383, Acc: 100.00%
+  Batch 50, Loss: 0.0269, Acc: 98.35%
+  Batch 100, Loss: 0.2332, Acc: 98.05%
+  Batch 150, Loss: 0.0395, Acc: 97.72%
+  Batch 200, Loss: 0.3378, Acc: 97.64%
+  Batch 250, Loss: 0.0613, Acc: 97.55%
+  训练损失: 0.0024, 训练准确率: 97.55%
+  测试准确率: 82.19%
+Epoch 19/20
+  Batch 0, Loss: 0.0407, Acc: 100.00%
+  Batch 50, Loss: 0.0389, Acc: 97.73%
+  Batch 100, Loss: 0.0263, Acc: 97.59%
+  Batch 150, Loss: 0.1371, Acc: 97.68%
+  Batch 200, Loss: 0.0170, Acc: 97.56%
+  Batch 250, Loss: 0.0759, Acc: 97.57%
+  训练损失: 0.0025, 训练准确率: 97.54%
+  测试准确率: 82.10%
+Epoch 20/20
+  Batch 0, Loss: 0.0306, Acc: 100.00%
+  Batch 50, Loss: 0.0129, Acc: 97.61%
+  Batch 100, Loss: 0.0467, Acc: 98.08%
+  Batch 150, Loss: 0.0937, Acc: 97.89%
+  Batch 200, Loss: 0.0376, Acc: 97.82%
+  Batch 250, Loss: 0.0217, Acc: 97.87%
+  训练损失: 0.0022, 训练准确率: 97.86%
+  测试准确率: 82.26%
+微调完成，最佳准确率: 82.26%
+
+阶段2: 剪枝 cars
+剪枝前评估:
+  剪枝前准确率: 82.26%
+开始剪枝，任务索引: 3
+剪枝比例: 75.0%
+模块 1: 剪枝 972/1296 (75.00%)
+模块 6: 剪枝 41472/55296 (75.00%)
+模块 11: 剪枝 165888/221184 (75.00%)
+模块 18: 剪枝 663552/884736 (75.00%)
+模块 25: 剪枝 1327104/1769472 (75.00%)
+模块 33: 剪枝 57802753/77070338 (75.00%)
+模块 36: 剪枝 9437185/12582912 (75.00%)
+剪枝后评估:
+  剪枝后准确率: 80.88%
+
+阶段3: 剪枝后微调 cars
+当前学习率: 0.0001
+微调 Epoch 1/10
+  Batch 0, Loss: 0.0469, Acc: 100.00%
+  Batch 50, Loss: 0.2456, Acc: 97.49%
+  Batch 100, Loss: 0.1835, Acc: 97.31%
+  Batch 150, Loss: 0.0468, Acc: 97.29%
+  Batch 200, Loss: 0.1259, Acc: 97.36%
+  Batch 250, Loss: 0.0244, Acc: 97.31%
+  微调准确率: 81.22%
+微调 Epoch 2/10
+  Batch 0, Loss: 0.0908, Acc: 96.88%
+  Batch 50, Loss: 0.0230, Acc: 97.18%
+  Batch 100, Loss: 0.1558, Acc: 97.31%
+  Batch 150, Loss: 0.0590, Acc: 97.58%
+  Batch 200, Loss: 0.0243, Acc: 97.73%
+  Batch 250, Loss: 0.1032, Acc: 97.52%
+  微调准确率: 81.58%
+微调 Epoch 3/10
+  Batch 0, Loss: 0.0434, Acc: 100.00%
+  Batch 50, Loss: 0.0975, Acc: 97.79%
+  Batch 100, Loss: 0.0342, Acc: 97.59%
+  Batch 150, Loss: 0.2078, Acc: 97.54%
+  Batch 200, Loss: 0.2600, Acc: 97.51%
+  Batch 250, Loss: 0.0118, Acc: 97.50%
+  微调准确率: 81.67%
+微调 Epoch 4/10
+  Batch 0, Loss: 0.1222, Acc: 96.88%
+  Batch 50, Loss: 0.0298, Acc: 97.92%
+  Batch 100, Loss: 0.0981, Acc: 97.77%
+  Batch 150, Loss: 0.0304, Acc: 97.66%
+  Batch 200, Loss: 0.0314, Acc: 97.71%
+  Batch 250, Loss: 0.0467, Acc: 97.63%
+  微调准确率: 81.69%
+微调 Epoch 5/10
+  Batch 0, Loss: 0.1348, Acc: 93.75%
+  Batch 50, Loss: 0.1832, Acc: 97.61%
+  Batch 100, Loss: 0.0540, Acc: 97.31%
+  Batch 150, Loss: 0.0356, Acc: 97.45%
+  Batch 200, Loss: 0.0259, Acc: 97.65%
+  Batch 250, Loss: 0.1751, Acc: 97.66%
+  微调准确率: 81.72%
+微调 Epoch 6/10
+  Batch 0, Loss: 0.0530, Acc: 100.00%
+  Batch 50, Loss: 0.0665, Acc: 98.47%
+  Batch 100, Loss: 0.0266, Acc: 98.27%
+  Batch 150, Loss: 0.0747, Acc: 97.91%
+  Batch 200, Loss: 0.4326, Acc: 97.89%
+  Batch 250, Loss: 0.0195, Acc: 97.96%
+  微调准确率: 81.89%
+微调 Epoch 7/10
+  Batch 0, Loss: 0.0750, Acc: 100.00%
+  Batch 50, Loss: 0.1182, Acc: 98.16%
+  Batch 100, Loss: 0.0636, Acc: 97.99%
+  Batch 150, Loss: 0.0095, Acc: 97.93%
+  Batch 200, Loss: 0.0311, Acc: 97.73%
+  Batch 250, Loss: 0.0174, Acc: 97.70%
+  微调准确率: 82.06%
+微调 Epoch 8/10
+  Batch 0, Loss: 0.0739, Acc: 93.75%
+  Batch 50, Loss: 0.0613, Acc: 97.86%
+  Batch 100, Loss: 0.0687, Acc: 97.99%
+  Batch 150, Loss: 0.0084, Acc: 98.01%
+  Batch 200, Loss: 0.0325, Acc: 97.84%
+  Batch 250, Loss: 0.1428, Acc: 97.92%
+  微调准确率: 81.74%
+微调 Epoch 9/10
+  Batch 0, Loss: 0.0463, Acc: 100.00%
+  Batch 50, Loss: 0.1333, Acc: 97.61%
+  Batch 100, Loss: 0.0240, Acc: 97.83%
+  Batch 150, Loss: 0.0728, Acc: 97.95%
+  Batch 200, Loss: 0.1364, Acc: 98.03%
+  Batch 250, Loss: 0.0323, Acc: 98.10%
+  微调准确率: 81.96%
+微调 Epoch 10/10
+  Batch 0, Loss: 0.0031, Acc: 100.00%
+  Batch 50, Loss: 0.0321, Acc: 97.98%
+  Batch 100, Loss: 0.0350, Acc: 97.99%
+  Batch 150, Loss: 0.1515, Acc: 98.01%
+  Batch 200, Loss: 0.0645, Acc: 97.93%
+  Batch 250, Loss: 0.0431, Acc: 97.92%
+  微调准确率: 82.10%
+
+cars 任务完成，最终准确率: 82.10%
+
+==================================================
+训练任务 3: FLOWERS
+==================================================
+加载 flowers 数据集 (train): 2040 张图像, 102 个类别
+加载 flowers 数据集 (test): 6149 张图像, 102 个类别
+为新任务准备掩码，新任务索引: 4
+
+阶段1: 微调训练 flowers
+当前学习率: 0.001
+Epoch 1/20
+[w 0709 15:25:30.196599 56 grad.cc:81] grads[2] 'classifiers.1.weight' doesn't have gradient. It will be set to zero: Var(44257373:1:1:1:i0:o0:s1:n0:g1,float32,classifiers.1.weight,7fa7233c0000)[196,4096,]
+[w 0709 15:25:30.196654 56 grad.cc:81] grads[3] 'classifiers.1.bias' doesn't have gradient. It will be set to zero: Var(44257375:1:1:1:i0:o0:s1:n0:g1,float32,classifiers.1.bias,7faadb5ffa00)[196,]
+  Batch 0, Loss: 5.9650, Acc: 0.00%
+  Batch 50, Loss: 3.4543, Acc: 10.48%
+  训练损失: 0.1233, 训练准确率: 13.69%
+  测试准确率: 46.90%
+Epoch 2/20
+  Batch 0, Loss: 2.0432, Acc: 43.75%
+  Batch 50, Loss: 1.1553, Acc: 51.78%
+  训练损失: 0.0544, 训练准确率: 53.27%
+  测试准确率: 67.99%
+Epoch 3/20
+  Batch 0, Loss: 1.4936, Acc: 62.50%
+  Batch 50, Loss: 0.6254, Acc: 72.73%
+  训练损失: 0.0294, 训练准确率: 72.32%
+  测试准确率: 73.25%
+Epoch 4/20
+  Batch 0, Loss: 0.5564, Acc: 78.12%
+  Batch 50, Loss: 0.6146, Acc: 81.74%
+  训练损失: 0.0194, 训练准确率: 82.74%
+  测试准确率: 80.44%
+Epoch 5/20
+  Batch 0, Loss: 0.1641, Acc: 96.88%
+  Batch 50, Loss: 0.2503, Acc: 88.48%
+  训练损失: 0.0123, 训练准确率: 88.49%
+  测试准确率: 80.83%
+Epoch 6/20
+  Batch 0, Loss: 0.1988, Acc: 96.88%
+  Batch 50, Loss: 0.1200, Acc: 90.56%
+  训练损失: 0.0094, 训练准确率: 90.77%
+  测试准确率: 81.36%
+Epoch 7/20
+  Batch 0, Loss: 0.1662, Acc: 96.88%
+  Batch 50, Loss: 0.5414, Acc: 93.75%
+  训练损失: 0.0066, 训练准确率: 93.85%
+  测试准确率: 81.38%
+Epoch 8/20
+  Batch 0, Loss: 0.2318, Acc: 93.75%
+  Batch 50, Loss: 0.1586, Acc: 94.85%
+  训练损失: 0.0053, 训练准确率: 94.84%
+  测试准确率: 83.64%
+Epoch 9/20
+  Batch 0, Loss: 0.1158, Acc: 93.75%
+  Batch 50, Loss: 0.1031, Acc: 94.61%
+  训练损失: 0.0054, 训练准确率: 94.30%
+  测试准确率: 83.44%
+Epoch 10/20
+  Batch 0, Loss: 0.1668, Acc: 93.75%
+  Batch 50, Loss: 0.0333, Acc: 95.28%
+  训练损失: 0.0042, 训练准确率: 94.99%
+  测试准确率: 85.33%
+当前学习率: 0.0001
+Epoch 11/20
+  Batch 0, Loss: 0.1418, Acc: 93.75%
+  Batch 50, Loss: 0.1415, Acc: 97.55%
+  训练损失: 0.0027, 训练准确率: 97.77%
+  测试准确率: 86.89%
+Epoch 12/20
+  Batch 0, Loss: 0.0246, Acc: 100.00%
+  Batch 50, Loss: 0.0714, Acc: 98.41%
+  训练损失: 0.0016, 训练准确率: 98.56%
+  测试准确率: 87.32%
+Epoch 13/20
+  Batch 0, Loss: 0.0524, Acc: 100.00%
+  Batch 50, Loss: 0.0046, Acc: 98.59%
+  训练损失: 0.0017, 训练准确率: 98.56%
+  测试准确率: 87.51%
+Epoch 14/20
+  Batch 0, Loss: 0.0159, Acc: 100.00%
+  Batch 50, Loss: 0.0238, Acc: 97.92%
+  训练损失: 0.0017, 训练准确率: 98.16%
+  测试准确率: 87.80%
+Epoch 15/20
+  Batch 0, Loss: 0.0084, Acc: 100.00%
+  Batch 50, Loss: 0.0113, Acc: 98.96%
+  训练损失: 0.0014, 训练准确率: 98.86%
+  测试准确率: 87.61%
+Epoch 16/20
+  Batch 0, Loss: 0.0133, Acc: 100.00%
+  Batch 50, Loss: 0.0074, Acc: 99.02%
+  训练损失: 0.0011, 训练准确率: 98.91%
+  测试准确率: 87.98%
+Epoch 17/20
+  Batch 0, Loss: 0.0383, Acc: 100.00%
+  Batch 50, Loss: 0.0639, Acc: 99.08%
+  训练损失: 0.0010, 训练准确率: 98.96%
+  测试准确率: 87.92%
+Epoch 18/20
+  Batch 0, Loss: 0.0106, Acc: 100.00%
+  Batch 50, Loss: 0.0355, Acc: 98.96%
+  训练损失: 0.0011, 训练准确率: 99.06%
+  测试准确率: 88.01%
+Epoch 19/20
+  Batch 0, Loss: 0.0033, Acc: 100.00%
+  Batch 50, Loss: 0.0074, Acc: 99.39%
+  训练损失: 0.0009, 训练准确率: 99.45%
+  测试准确率: 87.98%
+Epoch 20/20
+  Batch 0, Loss: 0.0102, Acc: 100.00%
+  Batch 50, Loss: 0.0330, Acc: 99.33%
+  训练损失: 0.0008, 训练准确率: 99.26%
+  测试准确率: 87.82%
+微调完成，最佳准确率: 88.01%
+
+阶段2: 剪枝 flowers
+剪枝前评估:
+  剪枝前准确率: 87.82%
+开始剪枝，任务索引: 4
+剪枝比例: 75.0%
+模块 1: 剪枝 729/972 (75.00%)
+模块 6: 剪枝 31104/41472 (75.00%)
+模块 11: 剪枝 124416/165888 (75.00%)
+模块 18: 剪枝 497664/663552 (75.00%)
+模块 25: 剪枝 995328/1327104 (75.00%)
+模块 33: 剪枝 43352064/57802753 (75.00%)
+模块 36: 剪枝 7077888/9437185 (75.00%)
+剪枝后评估:
+  剪枝后准确率: 87.48%
+
+阶段3: 剪枝后微调 flowers
+当前学习率: 0.0001
+微调 Epoch 1/10
+  Batch 0, Loss: 0.0651, Acc: 96.88%
+  Batch 50, Loss: 0.2564, Acc: 99.45%
+  微调准确率: 87.54%
+微调 Epoch 2/10
+  Batch 0, Loss: 0.0540, Acc: 96.88%
+  Batch 50, Loss: 0.0061, Acc: 98.59%
+  微调准确率: 87.28%
+微调 Epoch 3/10
+  Batch 0, Loss: 0.0115, Acc: 100.00%
+  Batch 50, Loss: 0.0594, Acc: 98.71%
+  微调准确率: 87.35%
+微调 Epoch 4/10
+  Batch 0, Loss: 0.0308, Acc: 96.88%
+  Batch 50, Loss: 0.0297, Acc: 99.02%
+  微调准确率: 87.74%
+微调 Epoch 5/10
+  Batch 0, Loss: 0.0065, Acc: 100.00%
+  Batch 50, Loss: 0.0158, Acc: 99.26%
+  微调准确率: 87.72%
+微调 Epoch 6/10
+  Batch 0, Loss: 0.0509, Acc: 100.00%
+  Batch 50, Loss: 0.0037, Acc: 99.57%
+  微调准确率: 87.67%
+微调 Epoch 7/10
+  Batch 0, Loss: 0.0149, Acc: 100.00%
+  Batch 50, Loss: 0.0089, Acc: 99.14%
+  微调准确率: 87.82%
+微调 Epoch 8/10
+  Batch 0, Loss: 0.0067, Acc: 100.00%
+  Batch 50, Loss: 0.0604, Acc: 99.20%
+  微调准确率: 87.87%
+微调 Epoch 9/10
+  Batch 0, Loss: 0.0039, Acc: 100.00%
+  Batch 50, Loss: 0.0688, Acc: 99.39%
+  微调准确率: 87.79%
+微调 Epoch 10/10
+  Batch 0, Loss: 0.0312, Acc: 100.00%
+  Batch 50, Loss: 0.0134, Acc: 99.45%
+  微调准确率: 87.74%
+
+flowers 任务完成，最终准确率: 87.74%
+掩码已保存到: checkpoints/packnet_masks.npy
+检查点已保存到: checkpoints/packnet_model.pkl
+掩码已保存到: checkpoints/packnet_masks.npy
+
+正在初始化模型结构...
+正在为模型重建所有任务的分类头...
+加载 cubs 数据集 (test): 5794 张图像, 200 个类别
+加载 cars 数据集 (test): 8000 张图像, 196 个类别
+加载 flowers 数据集 (test): 6149 张图像, 102 个类别
+正在加载模型权重和偏置...
+模型权重已从 checkpoints/packnet_model.pkl 加载。
+正在加载掩码...
+掩码已从文件加载: checkpoints/packnet_masks.npy
+正在为任务 'cubs' 准备测试数据...
+加载 cubs 数据集 (test): 5794 张图像, 200 个类别
+模型已设置为评估 'cubs' 任务，类别数: 200
+正在应用任务掩码和偏置...
+正在为任务 'cubs' 恢复偏置...
+已应用任务索引 2 (CUBS) 的掩码。
+
+开始评估...
+
+==============================
+任务 'CUBS' 的最终准确率: 68.69%
+==============================
+
+正在初始化模型结构...
+正在为模型重建所有任务的分类头...
+加载 cubs 数据集 (test): 5794 张图像, 200 个类别
+加载 cars 数据集 (test): 8000 张图像, 196 个类别
+加载 flowers 数据集 (test): 6149 张图像, 102 个类别
+正在加载模型权重和偏置...
+模型权重已从 checkpoints/packnet_model.pkl 加载。
+正在加载掩码...
+掩码已从文件加载: checkpoints/packnet_masks.npy
+正在为任务 'cars' 准备测试数据...
+加载 cars 数据集 (test): 8000 张图像, 196 个类别
+模型已设置为评估 'cars' 任务，类别数: 196
+正在应用任务掩码和偏置...
+正在为任务 'cars' 恢复偏置...
+已应用任务索引 3 (CARS) 的掩码。
+
+开始评估...
+
+==============================
+任务 'CARS' 的最终准确率: 79.14%
+==============================
+
+正在初始化模型结构...
+正在为模型重建所有任务的分类头...
+加载 cubs 数据集 (test): 5794 张图像, 200 个类别
+加载 cars 数据集 (test): 8000 张图像, 196 个类别
+加载 flowers 数据集 (test): 6149 张图像, 102 个类别
+正在加载模型权重和偏置...
+模型权重已从 checkpoints/packnet_model.pkl 加载。
+正在加载掩码...
+掩码已从文件加载: checkpoints/packnet_masks.npy
+正在为任务 'flowers' 准备测试数据...
+加载 flowers 数据集 (test): 6149 张图像, 102 个类别
+模型已设置为评估 'flowers' 任务，类别数: 102
+正在应用任务掩码和偏置...
+正在为任务 'flowers' 恢复偏置...
+已应用任务索引 4 (FLOWERS) 的掩码。
+
+开始评估...
+
+==============================
+任务 'FLOWERS' 的最终准确率:  87.74%
+==============================
