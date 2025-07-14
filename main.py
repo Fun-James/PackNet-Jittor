@@ -236,52 +236,6 @@ class PackNetTrainer:
         
         return final_acc
     
-    def evaluate_all_tasks(self):
-        """评估所有任务的性能"""
-        print(f"\n{'='*50}")
-        print("最终评估：所有任务性能")
-        print(f"{'='*50}")
-        
-        results = {}
-        
-        for task_idx, task_name in enumerate(self.task_list):
-            print(f"\n评估任务: {task_name.upper()}")
-            
-            # 加载测试数据
-            test_loader, _ = create_dataloader(
-                dataset_name=task_name, 
-                data_root=self.data_root, 
-                split='test', 
-                batch_size=self.batch_size, 
-                shuffle=False
-            )
-            
-            # 设置模型到对应任务
-            self.model.set_dataset(task_name)
-            
-            # 创建剪枝器并应用对应任务的掩码
-            pruner = PackNetPruning(
-                model=self.model.shared,
-                previous_masks=self.previous_masks
-            )
-            pruner.apply_mask(task_idx + 1)  # 任务索引从1开始
-            
-            # 评估
-            accuracy = self.evaluate(test_loader)
-            results[task_name] = accuracy
-            
-            print(f"  {task_name} 最终准确率: {accuracy:.2f}%")
-        
-        # 打印汇总结果
-        print(f"\n{'='*50}")
-        print("PackNet实验结果汇总")
-        print(f"{'-'*30}")
-        for task_name, acc in results.items():
-            print(f"{task_name.upper():<10s} | {acc:.2f}%")
-        print(f"{'-'*30}")
-        
-        return results
-    
     def save_checkpoint(self):
         """保存检查点"""
         checkpoint_path = os.path.join(self.save_dir, "packnet_model.pkl")

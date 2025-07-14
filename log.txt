@@ -177,63 +177,63 @@ Epoch 20/20
   Batch 50, Loss: 0.9331, Acc: 54.17%
   Batch 100, Loss: 0.8272, Acc: 63.00%
   Batch 150, Loss: 0.5542, Acc: 68.23%
-  微调准确率: 67.97%
+  微调准确率: 63.01%
 微调 Epoch 2/10
   Batch 0, Loss: 0.3684, Acc: 84.38%
   Batch 50, Loss: 0.5338, Acc: 82.29%
   Batch 100, Loss: 0.4122, Acc: 82.21%
   Batch 150, Loss: 0.6033, Acc: 83.01%
-  微调准确率: 70.71%
+  微调准确率: 65.74%
 微调 Epoch 3/10
   Batch 0, Loss: 0.4992, Acc: 84.38%
   Batch 50, Loss: 0.3348, Acc: 86.46%
   Batch 100, Loss: 0.3323, Acc: 86.29%
   Batch 150, Loss: 0.4475, Acc: 86.15%
-  微调准确率: 71.59%
+  微调准确率: 66.62%
 微调 Epoch 4/10
   Batch 0, Loss: 0.2130, Acc: 93.75%
   Batch 50, Loss: 0.3345, Acc: 87.62%
   Batch 100, Loss: 0.6094, Acc: 88.03%
   Batch 150, Loss: 0.3857, Acc: 88.10%
-  微调准确率: 72.28%
+  微调准确率: 67.31%
 微调 Epoch 5/10
   Batch 0, Loss: 0.3479, Acc: 93.75%
   Batch 50, Loss: 0.4318, Acc: 90.56%
   Batch 100, Loss: 0.3743, Acc: 89.54%
   Batch 150, Loss: 0.1891, Acc: 90.09%
-  微调准确率: 72.56%
+  微调准确率: 67.52%
 微调 Epoch 6/10
   Batch 0, Loss: 0.2431, Acc: 93.75%
   Batch 50, Loss: 0.1468, Acc: 90.69%
   Batch 100, Loss: 0.4593, Acc: 90.72%
   Batch 150, Loss: 0.1243, Acc: 90.56%
-  微调准确率: 72.83%
+  微调准确率: 67.86%
 微调 Epoch 7/10
   Batch 0, Loss: 0.1251, Acc: 96.88%
   Batch 50, Loss: 0.4979, Acc: 91.67%
   Batch 100, Loss: 0.3378, Acc: 91.27%
   Batch 150, Loss: 0.1718, Acc: 91.25%
-  微调准确率: 72.99%
+  微调准确率: 68.02%
 微调 Epoch 8/10
   Batch 0, Loss: 0.2074, Acc: 90.62%
   Batch 50, Loss: 0.3794, Acc: 91.85%
   Batch 100, Loss: 0.1212, Acc: 91.77%
   Batch 150, Loss: 0.1311, Acc: 92.09%
-  微调准确率: 73.44%
+  微调准确率: 68.47%
 微调 Epoch 9/10
   Batch 0, Loss: 0.1085, Acc: 100.00%
   Batch 50, Loss: 0.1593, Acc: 92.28%
   Batch 100, Loss: 0.1236, Acc: 92.33%
   Batch 150, Loss: 0.0816, Acc: 92.47%
-  微调准确率: 73.40%
+  微调准确率: 68.43%
 微调 Epoch 10/10
   Batch 0, Loss: 0.3040, Acc: 90.62%
   Batch 50, Loss: 0.2642, Acc: 94.36%
   Batch 100, Loss: 0.1569, Acc: 93.90%
   Batch 150, Loss: 0.1817, Acc: 93.44%
-  微调准确率: 73.66%
+  微调准确率: 68.69%
 
-cubs 任务完成，最终准确率: 73.66%
+cubs 任务完成，最终准确率: 68.69%
 
 ==================================================
 训练任务 2: CARS
@@ -442,7 +442,7 @@ Epoch 20/20
 模块 33: 剪枝 57802753/77070338 (75.00%)
 模块 36: 剪枝 9437185/12582912 (75.00%)
 剪枝后评估:
-  剪枝后准确率: 80.88%
+  剪枝后准确率: 77.62%
 
 阶段3: 剪枝后微调 cars
 当前学习率: 0.0001
@@ -453,7 +453,7 @@ Epoch 20/20
   Batch 150, Loss: 0.0468, Acc: 97.29%
   Batch 200, Loss: 0.1259, Acc: 97.36%
   Batch 250, Loss: 0.0244, Acc: 97.31%
-  微调准确率: 81.22%
+  微调准确率: 77.62%
 微调 Epoch 2/10
   Batch 0, Loss: 0.0908, Acc: 96.88%
   Batch 50, Loss: 0.0230, Acc: 97.18%
@@ -461,7 +461,7 @@ Epoch 20/20
   Batch 150, Loss: 0.0590, Acc: 97.58%
   Batch 200, Loss: 0.0243, Acc: 97.73%
   Batch 250, Loss: 0.1032, Acc: 97.52%
-  微调准确率: 81.58%
+  微调准确率: 78.03%
 微调 Epoch 3/10
   Batch 0, Loss: 0.0434, Acc: 100.00%
   Batch 50, Loss: 0.0975, Acc: 97.79%
@@ -469,7 +469,7 @@ Epoch 20/20
   Batch 150, Loss: 0.2078, Acc: 97.54%
   Batch 200, Loss: 0.2600, Acc: 97.51%
   Batch 250, Loss: 0.0118, Acc: 97.50%
-  微调准确率: 81.67%
+  微调准确率: 78.31%
 微调 Epoch 4/10
   Batch 0, Loss: 0.1222, Acc: 96.88%
   Batch 50, Loss: 0.0298, Acc: 97.92%
@@ -477,7 +477,7 @@ Epoch 20/20
   Batch 150, Loss: 0.0304, Acc: 97.66%
   Batch 200, Loss: 0.0314, Acc: 97.71%
   Batch 250, Loss: 0.0467, Acc: 97.63%
-  微调准确率: 81.69%
+  微调准确率: 78.42%
 微调 Epoch 5/10
   Batch 0, Loss: 0.1348, Acc: 93.75%
   Batch 50, Loss: 0.1832, Acc: 97.61%
@@ -485,7 +485,7 @@ Epoch 20/20
   Batch 150, Loss: 0.0356, Acc: 97.45%
   Batch 200, Loss: 0.0259, Acc: 97.65%
   Batch 250, Loss: 0.1751, Acc: 97.66%
-  微调准确率: 81.72%
+  微调准确率: 78.44%
 微调 Epoch 6/10
   Batch 0, Loss: 0.0530, Acc: 100.00%
   Batch 50, Loss: 0.0665, Acc: 98.47%
@@ -493,7 +493,7 @@ Epoch 20/20
   Batch 150, Loss: 0.0747, Acc: 97.91%
   Batch 200, Loss: 0.4326, Acc: 97.89%
   Batch 250, Loss: 0.0195, Acc: 97.96%
-  微调准确率: 81.89%
+  微调准确率: 78.51%
 微调 Epoch 7/10
   Batch 0, Loss: 0.0750, Acc: 100.00%
   Batch 50, Loss: 0.1182, Acc: 98.16%
@@ -501,7 +501,7 @@ Epoch 20/20
   Batch 150, Loss: 0.0095, Acc: 97.93%
   Batch 200, Loss: 0.0311, Acc: 97.73%
   Batch 250, Loss: 0.0174, Acc: 97.70%
-  微调准确率: 82.06%
+  微调准确率: 78.63%
 微调 Epoch 8/10
   Batch 0, Loss: 0.0739, Acc: 93.75%
   Batch 50, Loss: 0.0613, Acc: 97.86%
@@ -509,7 +509,7 @@ Epoch 20/20
   Batch 150, Loss: 0.0084, Acc: 98.01%
   Batch 200, Loss: 0.0325, Acc: 97.84%
   Batch 250, Loss: 0.1428, Acc: 97.92%
-  微调准确率: 81.74%
+  微调准确率: 78.82%
 微调 Epoch 9/10
   Batch 0, Loss: 0.0463, Acc: 100.00%
   Batch 50, Loss: 0.1333, Acc: 97.61%
@@ -517,7 +517,7 @@ Epoch 20/20
   Batch 150, Loss: 0.0728, Acc: 97.95%
   Batch 200, Loss: 0.1364, Acc: 98.03%
   Batch 250, Loss: 0.0323, Acc: 98.10%
-  微调准确率: 81.96%
+  微调准确率: 79.01%
 微调 Epoch 10/10
   Batch 0, Loss: 0.0031, Acc: 100.00%
   Batch 50, Loss: 0.0321, Acc: 97.98%
@@ -525,9 +525,9 @@ Epoch 20/20
   Batch 150, Loss: 0.1515, Acc: 98.01%
   Batch 200, Loss: 0.0645, Acc: 97.93%
   Batch 250, Loss: 0.0431, Acc: 97.92%
-  微调准确率: 82.10%
+  微调准确率: 79.14%
 
-cars 任务完成，最终准确率: 82.10%
+cars 任务完成，最终准确率: 79.14%
 
 ==================================================
 训练任务 3: FLOWERS

@@ -43,7 +43,7 @@ class PackNetPruning:
     def get_prunable_modules(self):
         """获取所有可剪枝的模块"""
         prunable_modules = []
-        # 直接使用传入的 model (应为 model.shared)
+        # 直接使用传入的 model
         for module_idx, module in enumerate(self.model.modules()):
             if isinstance(module, (jt.nn.Conv2d, jt.nn.Linear)):
                 prunable_modules.append((module_idx, module))
@@ -102,7 +102,7 @@ class PackNetPruning:
                 current_task_weights = weight[current_task_mask]
                 
                 if current_task_weights.numel() == 0:
-                    # print(f"模块 {module_idx}: 没有属于当前任务的权重") # 可以注释掉以减少输出
+                    # print(f"模块 {module_idx}: 没有属于当前任务的权重")
                     continue
                 
                 # 计算剪枝阈值
@@ -157,7 +157,7 @@ class PackNetPruning:
                     # 只有属于当前任务的权重才能有梯度
                     current_task_mask = (mask == self.current_dataset_idx)
                     
-                    # 关键改动：使用 .logic_not() 来反转掩码
+                    # 反转掩码
                     grad[current_task_mask == False] = 0
 
     def make_pruned_zero(self):
@@ -180,13 +180,6 @@ class PackNetPruning:
         """
         masks_to_apply = self.current_masks if self.current_masks is not None else self.previous_masks
 
-        # PackNet的逻辑是，后续任务的权重是在之前任务剪枝掉的权重上训练的。
-        # 所以评估任务N时，需要保留任务1到任务N的所有权重。
-        # 根据我们之前的分析，您的任务索引是从2开始的(Cubs=2, Cars=3, Flowers=4)。
-        # 而ImageNet预训练权重被标记为1。
-        
-        # 所以正确的逻辑是，评估任务X (dataset_idx)时，我们需要保留所有
-        # 掩码值大于0，且小于等于 `dataset_idx` 的权重。
         
         for module_idx, module in self.get_prunable_modules():
             if module_idx in masks_to_apply:

@@ -2,12 +2,11 @@
 
 import jittor as jt
 import jittor.nn as nn
-from jittor.models import vgg16  # <-- 关键改动：从 jittor.models 导入 vgg16
+from jittor.models import vgg16  
 
 class ModifiedVGG16(jt.nn.Module):
     """
     修改的VGG16模型，支持多任务学习
-    (已修正 Jittor 模型加载方式)
     """
     
     def __init__(self):
