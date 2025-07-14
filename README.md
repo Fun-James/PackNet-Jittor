@@ -154,13 +154,13 @@ PackNetPruning.freeze_weights_by_mask(model, previous_masks)
 
 ### 训练过程（CUBS）
 
-![image-20250714104323383](C:\Users\27979\Desktop\Continuous Learning\packnet-jittor\image-20250714104323383.png)
+![image-20250714104323383](.\image-20250714104323383.png)
 
-训练完整log在log.txt中。
+训练完整log在log.txt中。总训练时长115min左右。
 
 ### 缓解灾难性遗忘效果
 
-![image-20250714104517345](C:\Users\27979\Desktop\Continuous Learning\packnet-jittor\image-20250714104517345.png)
+![image-20250714104517345](.\image-20250714104517345.png)
 
 ## 🔧 核心特性
 
