@@ -160,7 +160,13 @@ PackNetPruning.freeze_weights_by_mask(model, previous_masks)
 
 ### 缓解灾难性遗忘效果
 
+#### Jittor
+
 ![image-20250714104517345](image-20250714104517345.png)
+
+#### PyTorch复现
+
+![image-20250718155000567](image-20250718155000567.png)
 
 ## 🔧 核心特性
 
